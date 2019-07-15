@@ -1,0 +1,32 @@
+<form #form="ngForm" (submit)="onSubmit(form)"  autocomplete="off">
+    <input type="hidden" name="ID" #ID="ngModel" [(ngModel)]="service.formData.ID" >
+    <div class="form-group">
+        <label>Student Name</label>
+        <input  name="StudentName" #StudentName="ngModel" [(ngModel)]="service.formData.StudentName" class="form-control" required>
+        <div class="validation-error" *ngIf="StudentName.invalid&&StudentName.touched">This field is required.</div>
+    </div> 
+        <div class="class form-row">
+                <div class="form-group col-md-6">
+                        <label>Language and Arts</label>
+                        <input  name="Language_Arts" #Language_Arts="ngModel" [(ngModel)]="service.formData.Language_Arts" class="form-control">
+                    </div>
+        <div class="form-group col-md-6">
+                <label>Science</label>
+                <input  name="Science" #Science="ngModel" [(ngModel)]="service.formData.Science" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+                    <label>Social Studies</label>
+                    <input  name="SocialStudies" #SocialStudies="ngModel" [(ngModel)]="service.formData.SocialStudies" class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+        <label>Math</label>
+        <input  name="Math" #Math="ngModel" [(ngModel)]="service.formData.Math" class="form-control">
+        </div>
+      
+    </div>
+    <div class="class form-group">
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block">SUBMIT</button>
+       
+     </div>
+    
+</form>

@@ -1,0 +1,17 @@
+● src
++---● app
+|   +--● students
+|   |  |--students.component.ts|.html|.css
+|   |  +--● student
+|   |  |  |--student.component.ts|.html|.css
+|   |  |
+|   |  +--● student-list
+|   |  |  |--student-list.component.ts|.html|.css
+|   |  |
+|   |  +--● shared
+|   |     |--student.service.ts
+|   |     |--student.model.ts
+|   |
+|   |--app.module.ts
+|
+|--index.html (cdn path for bootstrap)
